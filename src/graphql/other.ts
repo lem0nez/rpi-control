@@ -9,7 +9,7 @@ export const GLOBAL_EVENTS = gql(`
 export const PREFERENCES = gql(`
   query Preferences {
     preferences {
-      hotspotHandlingEnabled
+      masterApHandlingEnabled
       piano {
         soundsVolume
         recordAmplitudeScale
@@ -21,13 +21,13 @@ export const PREFERENCES = gql(`
 
 export const UPDATE_PREFERENCES = gql(`
   mutation UpdatePreferences(
-    $hotspotHandlingEnabled: Boolean
+    $masterApHandlingEnabled: Boolean
     $pianoSoundsVolume: Float
     $pianoRecordAmplitudeScale: OptionalFloatUpdate
     $pianoRecordingsArtist: OptionalStringUpdate
   ) {
     updatePreferences(update: {
-      hotspotHandlingEnabled: $hotspotHandlingEnabled
+      masterApHandlingEnabled: $masterApHandlingEnabled
       piano: {
         soundsVolume: $pianoSoundsVolume
         recordAmplitudeScale: $pianoRecordAmplitudeScale

@@ -184,9 +184,9 @@ type Preferences {
 	"""
 	Whether to disconnect from Wi-Fi access point if connected Bluetooth device is the same.
 	It prevents audio freezing while hosting device plays it via Bluetooth.
-	Hotspot configuration must be provided at server initialization to make it work.
+	Master AP configuration must be provided at server initialization to make it work.
 	"""
-	hotspotHandlingEnabled: Boolean!
+	masterApHandlingEnabled: Boolean!
 	"""
 	Piano-related settings.
 	"""
@@ -194,7 +194,7 @@ type Preferences {
 }
 
 input PreferencesUpdate {
-	hotspotHandlingEnabled: Boolean
+	masterApHandlingEnabled: Boolean
 	piano: PianoPreferencesUpdate
 }
 
